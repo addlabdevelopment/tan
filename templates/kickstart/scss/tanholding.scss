@@ -1,0 +1,767 @@
+@import "mixins";
+@import "header";
+@import "breadcrumbs";
+@import "footer";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:600");
+
+.page-index {
+  & .main-img {
+    height: calc(100vh - 100px);
+    background: url("../img/01.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+.dividert {
+  float: left;
+  width: 100%;
+  border-top: 1px #7a7a7a solid;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+/*About*/
+.aboutcontainer,
+.contactscontainer {
+  padding: 25px 10px;
+  & .custom-block {
+    & * {
+      font-family: $sans;
+    }
+    & h1 {
+      color: $blue;
+      font-family: $cormo;
+      float: left;
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+      margin: 15px 0;
+    }
+    & h2 {
+      color: $blue;
+      font-family: $sans;
+      float: left;
+      width: 100%;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    & hr {
+      width: 100px;
+      height: 3px;
+      border-top: 3px #7a7a7a solid;
+    }
+    & p {
+      color: #7a7a7a;
+      text-align: center;
+      line-height: 23px;
+      padding: 10px 0;
+    }
+    & .half {
+      & p {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+    & .icn1 {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 15px auto;
+    }
+    /*custom icons*/
+    &.about-vision {
+      & .vision {
+        background: url("../img/icon-vision.png") no-repeat;
+        background-position: center center;
+        background-size: 100%;
+      }
+      & .mission {
+        background: url("../img/icon-mission.png") no-repeat;
+        background-position: center center;
+        background-size: 100%;
+      }
+    }
+    &.about-philisofy {
+      & .htabs {
+        & ul {
+          margin: 0px;
+          padding: 0px;
+          float: left;
+          width: 100%;
+          list-style: none;
+          & li {
+            float: left;
+            margin: 0 0 10px 0;
+            border: 2px #7a7a7a solid;
+            border-radius: 14px;
+            padding: 0px;
+            width: 100%;
+            & a {
+              color: #7a7a7a;
+              font-family: $cormo;
+              font-size: 22px;
+              float: left;
+              width: 100%;
+              border-radius: 12px;
+              padding: 10px 20px 10px 20px;
+              text-decoration: none;
+            }
+            & a:hover {
+              text-decoration: none;
+              background: $blue;
+              color: #fff;
+            }
+            & a.active {
+              text-decoration: none;
+              background: $blue;
+              color: #fff;
+            }
+          }
+        }
+      }
+      & .htabscontent {
+        & .tb {
+          display: none;
+          max-height: 350px;
+          overflow: hidden;
+          & h1 {
+            font-size: 20px;
+            text-align: left;
+            padding: 0px;
+            margin: 0px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-family: $sans;
+          }
+          & p {
+            text-align: left;
+            margin: 0px;
+            line-height: 21px;
+            font-size: 14px;
+          }
+        }
+        & .tb:first-child {
+          display: block;
+        }
+      }
+    }
+    &.activity-text {
+      & .htabs,
+      .htabscontent {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.page-team-milano,
+.page-team-lisbon {
+  & .teamMembers {
+    & .team-row {
+      float: left;
+      width: 100%;
+    }
+    & .team-member {
+      float: left;
+      width: 80%;
+      margin: 50px 10%;
+      min-height: 30px;
+      text-align: center;
+      @include MaxQuery(768) {
+        margin: 20px 10%;
+      }
+      @include MaxQuery(540) {
+        margin: 20px 2%;
+        width: 96%;
+      }
+      & .figureimg {
+        display: inline-block;
+        float: none;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        border: 8px $blue solid;
+        @include MaxQuery(768) {
+          width: 180px;
+          height: 180px;
+        }
+        @include MaxQuery(540) {
+          width: 120px;
+          height: 120px;
+          border: 4px $blue solid;
+        }
+        & .bg {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: 4px #fff solid;
+        }
+      }
+      & .figurename {
+        float: left;
+        width: 100%;
+        margin: 28px 0 0 0;
+        text-align: center;
+        color: #7a7a7a;
+        font-family: $cormo;
+        font-size: 22px;
+        @include MaxQuery(540) {
+          margin: 14px 0 0 0;
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+      & .figureposition {
+        float: left;
+        width: 100%;
+        margin: 10px 0 0 0;
+        text-align: center;
+        color: $blue;
+        font-family: $cormo;
+        font-size: 16px;
+        @include MaxQuery(540) {
+          margin: 5px 0 0 0;
+        }
+      }
+    }
+  }
+}
+.page-team-milano,
+.page-team-lisbon {
+  & .teamMembers {
+    & .team-member {
+      & .team-1 {
+        background: url("../img/team/milan/team-milan-01-filippo-giovannini.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+      & .team-2 {
+        background: url("../img/team/milan/team-milan-02-stefano-mauro.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+      & .team-3 {
+        background: url("../img/team/milan/team-milan-03-veronica-barberini.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+      & .team-4 {
+        background: url("../img/team/milan/team-milan-04-aurora-querci.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+      & .team-5 {
+        background: url("../img/team/milan/team-milan-05-mattia-monti.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+      & .team-6 {
+        background: url("../img/team/milan/team-milan-06-laura-bonetti.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+      & .team-7 {
+        background: url("../img/team/lisbon/team-lisbon-01-antónio-meunier-mendonca-partner.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+      & .team-8 {
+        background: url("../img/team/lisbon/team-lisbon-02-michele-frediano-partner.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+      & .team-9 {
+        background: url("../img/team/lisbon/team-lisbon-03-francisco-seabra-ferreira-partner.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+      & .team-10 {
+        background: url("../img/team/lisbon/team-lisbon-04-tiago-meireles-project-management.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+      & .team-11 {
+        background: url("../img/team/lisbon/team-lisbon-05-natasha-campos-cruz-personal-assistant.jpg")
+          no-repeat center center;
+        @include MaxQuery(540) {
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+.partners-logos {
+  float: left;
+  width: 100%;
+  height: auto;
+  & ul {
+    list-style: none;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0px;
+    & li {
+      float: none;
+      display: inline-block;
+      width: 24%;
+      margin: 0 0 23px 0;
+      padding: 0px;
+      @include MaxQuery(320) {
+        margin: 0 0 10px 0;
+      }
+      @include MaxQuery(768) {
+        width: 32%;
+      }
+      @include MaxQuery(580) {
+        width: 49%;
+      }
+
+      & .pitem {
+        float: left;
+        width: 100%;
+        min-height: 150px;
+        height: 150px;
+        background-size: contain !important;
+        @include MaxQuery(375) {
+          height: 105px;
+          min-height: 105px;
+        }
+        @include MaxQuery(320) {
+          height: 90px;
+          min-height: 90px;
+        }
+      }
+    }
+  }
+}
+.partners-logos {
+  & ul {
+    & li {
+      & .logo-partner-1 {
+        background: url("../img/partners/partners-01-fondazionemike.jpg")
+          no-repeat center center;
+      }
+      & .logo-partner-2 {
+        background: url("../img/partners/partners-02-brugnoli.jpg") no-repeat
+          center center;
+      }
+      & .logo-partner-3 {
+        background: url("../img/partners/partners-03-barnes.jpg") no-repeat
+          center center;
+      }
+      & .logo-partner-4 {
+        background: url("../img/partners/partners-04-avm.jpg") no-repeat center
+          center;
+      }
+      & .logo-partner-5 {
+        background: url("../img/partners/partners-05-wally.jpg") no-repeat
+          center center;
+      }
+      & .logo-partner-6 {
+        background: url("../img/partners/partners-06-aspes.jpg") no-repeat
+          center center;
+      }
+      & .logo-partner-7 {
+        background: url("../img/partners/partners-07-guala.jpg") no-repeat
+          center center;
+      }
+    }
+  }
+}
+
+.contact-info {
+  float: left;
+  width: 100%;
+  @include MaxQuery(1200) {
+    text-align: center;
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  & .contact-items {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 35px 0 45px 0;
+    @include MaxQuery(1200) {
+      width: auto;
+      height: auto;
+      margin: 35px 0 45px 100px;
+      float: none;
+      display: inline-block;
+      float: none;
+    }
+    @include MaxQuery(768) {
+      margin: 20px 0 35px 2%;
+    }
+    & ul {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      float: left;
+      width: 100%;
+      @include MaxQuery(1200) {
+        text-align: center;
+        float: none;
+        display: inline-block;
+      }
+      & li {
+        float: left;
+        padding: 0px;
+        margin: 0px;
+        width: 23%;
+        margin-left: 2%;
+        height: auto;
+        min-height: 100px;
+        @include MaxQuery(1200) {
+          width: 47%;
+          margin-left: 2%;
+          display: inline-block;
+          float: none;
+        }
+        @include MaxQuery(768) {
+          width: auto;
+          margin-left: 0%;
+          float: none;
+          display: initial;
+          float: left;
+          width: 100%;
+        }
+        & i {
+          float: left;
+          width: 100px;
+          height: 100px;
+          margin: 0 20px 0 0;
+        }
+        & h1 {
+          width: calc(100% - 130px);
+          font-size: 20px;
+          text-align: left;
+          float: left;
+          margin: 15px 0 5px 0;
+          color: #7a7a7a;
+          font-family: $sans;
+          font-weight: bold;
+        }
+        & p {
+          text-align: left;
+          float: left;
+          width: calc(100% - 130px);
+          padding: 0px;
+          font-weight: bold;
+          margin: 0px;
+          font-size: 12px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+  & .contact-items {
+    & ul {
+      & li.location {
+        & i {
+          background: url("../img/icons/contact-01-location.png") no-repeat
+            center center;
+          background-size: 90px 90px;
+        }
+      }
+      & li.phone {
+        & i {
+          background: url("../img/icons/contact-02-call.png") no-repeat center
+            center;
+          background-size: 90px 90px;
+        }
+      }
+      & li.fax {
+        & i {
+          background: url("../img/icons/contact-03-fax.png") no-repeat center
+            center;
+          background-size: 90px 90px;
+        }
+      }
+      & li.info {
+        & i {
+          background: url("../img/icons/contact-04-info.png") no-repeat center
+            center;
+          background-size: 90px 90px;
+        }
+      }
+    }
+  }
+  & .branches {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+    & h2 {
+      color: #7a7a7a;
+      font-weight: normal;
+      font-family: $cormo;
+      font-size: 22px;
+    }
+    & hr {
+      width: 15%;
+      margin: 0 auto 15px auto;
+      border-top: 2px #7a7a7a solid;
+    }
+    & p {
+      width: 100%;
+      float: left;
+      text-align: center;
+      padding: 0px;
+      margin: 0px 0 6px 0;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}
+.contact-form {
+  margin-bottom: 30px;
+  & .inpt {
+    @include MinQuery(768) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  & .form-group {
+    margin-bottom: 15px !important;
+    & input {
+      border: 2px #7a7a7a solid;
+      border-radius: 10px;
+      height: 40px;
+    }
+    & input.btn {
+      border-color: $blue !important;
+      background-color: $blue;
+      width: 150px;
+      margin: 0 auto;
+    }
+    & textarea {
+      border: 2px #7a7a7a solid;
+      border-radius: 10px;
+      max-width: 100%;
+      max-height: 175px;
+      height: 175px;
+    }
+  }
+}
+
+.main-investments {
+  & .inv-item {
+    @include MaxQuery(520) {
+      text-align: center !important;
+      float: left;
+    }
+  }
+  & .icn1 {
+    float: left;
+    width: 100px;
+    height: 100px;
+    @include MaxQuery(520) {
+      float: none;
+    }
+  }
+  & .detswrapper {
+    float: left;
+    width: calc(100% - 115px);
+    margin-left: 15px;
+    @include MaxQuery(520) {
+      float: left;
+      width: 100%;
+      margin-left: 0px;
+      margin-bottom: 30px;
+    }
+    & h1 {
+      text-align: left;
+      color: #7a7a7a;
+      font-family: $sans;
+      font-weight: bold;
+      font-size: 20px;
+      @include MaxQuery(520) {
+        text-align: center;
+      }
+    }
+    & p {
+      text-align: left;
+      padding-bottom: 0px;
+
+      @include MaxQuery(520) {
+        text-align: center;
+      }
+    }
+    & span.read-more {
+      & a {
+        color: $blue;
+      }
+      & a:hover {
+        text-decoration: none;
+      }
+      & i.fa-chevron-right {
+        color: #7a7a7a;
+        font-size: 12px;
+        font-family: "Font Awesome 5 Free" !important;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.main-investments {
+  & .icn1.telecommunication {
+    background: url("../img/icons/investimenti-01-telecommunication.png")
+      no-repeat center center;
+    background-size: contain;
+  }
+  & .icn1.immobiliare {
+    background: url("../img/icons/investimenti-02-immobiliare.png") no-repeat
+      center center;
+    background-size: contain;
+  }
+  & .icn1.energy-rinnovabili {
+    background: url("../img/icons/investimenti-03-energie-rinnovabili.png")
+      no-repeat center center;
+    background-size: contain;
+  }
+  & .icn1.energy-verde {
+    background: url("../img/icons/investimenti-04-energia-verde.png") no-repeat
+      center center;
+    background-size: contain;
+  }
+  & .icn1.alimentare {
+    background: url("../img/icons/investimenti-05-alimentare.png") no-repeat
+      center center;
+    background-size: contain;
+  }
+
+  & .icn1.servizi {
+    background: url("../img/icons/investimenti-06-servizi.png") no-repeat center
+      center;
+    background-size: contain;
+  }
+}
+
+.investment-item {
+  width: 90%;
+  margin: 0 5%;
+  float: left;
+  & .icon-title {
+    float: left;
+    width: 100%;
+    text-align: center;
+    & i {
+      float: none;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+  }
+  & .inv-row {
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    & h1 {
+      font-family: $sans;
+      font-size: 24px;
+    }
+    & .img1 {
+      float: left;
+      width: 260px;
+      height: 220px;
+      margin-right: 15px;
+      @include MaxQuery(768) {
+        float: none;
+        margin: 10px auto;
+      }
+    }
+    & .detswrapper {
+      float: left;
+      width: calc(100% - 275px);
+      @include MaxQuery(768) {
+        width: 100%;
+        margin: 10px auto;
+      }
+      & p {
+        text-align: left;
+        margin-top: 0px;
+        padding-top: 0px;
+        font-size: 14px;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        & strong {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.telecommunications {
+  & .icon-title {
+    & i {
+      background: url("../img/icons/investimenti-01-telecommunication.png")
+        no-repeat center center;
+      background-size: contain;
+    }
+  }
+  & .pipeline {
+    background: url("../img/04-a-01.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  & .exits {
+    background: url("../img/04-a-02.jpg") no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.realestate {
+  & .icon-title {
+    & i {
+      background: url("../img/icons/investimenti-02-immobiliare.png") no-repeat
+        center center;
+      background-size: contain;
+    }
+  }
+}
+
+.renewable-energy {
+  & .icon-title {
+    & i {
+      background: url("../img/icons/investimenti-03-energie-rinnovabili.png")
+        no-repeat center center;
+      background-size: contain;
+    }
+  }
+  & .current {
+    background: url("../img/04-investimenti-03-energiarinnovabili-02.jpg")
+      no-repeat center center;
+    background-size: cover;
+  }
+  & .exits {
+    background: url("../img/04-investimenti-03-energiarinnovabili-03.jpg")
+      no-repeat center center;
+    background-size: cover;
+  }
+}
